@@ -2,7 +2,23 @@
 
 A professional, responsive, and themeable application for selecting skip sizes for waste management services. This project was created as a React coding challenge to redesign the skip selection page from wewantwaste.co.uk with enhanced UI/UX, complete responsiveness, and modern React best practices.
 
-![Skip Selector App](https://via.placeholder.com/800x400?text=Skip+Selector+Application)
+## Screenshots
+
+### Desktop Experience
+![Skip Selector Desktop](./public/desktopScreen.png)
+*Modern desktop interface with sticky progress bar and responsive card layout*
+
+### Mobile Experience
+![Skip Selector Mobile](./public/phoneScreen.jpg)
+*Optimized mobile interface with touch-friendly interactions*
+
+### Light & Dark Theme Support
+<div align="center">
+  <img src="./public/desktopScreen.png" width="45%" alt="Light Theme Desktop" />
+  <img src="./public/phoneScreen.jpg" width="45%" alt="Dark Theme Mobile" />
+</div>
+
+*Seamless theme switching with automatic system preference detection*
 
 ## Challenge Overview
 
@@ -66,6 +82,32 @@ Components are built with reusability and maintainability in mind:
 - **Loading States** - Clear indicators when data is loading
 - **Error Handling** - User-friendly error messages with recovery options
 - **Responsive Behavior** - Layout adapts to different screen sizes with appropriate component sizing
+
+## Key Features Demonstrated
+
+### 🎨 Modern UI/UX Design
+- Vibrant gradient backgrounds with smooth transitions
+- Card-based layout with hover animations
+- Sticky progress navigation with step indicators
+- Professional color scheme and typography
+
+### 📱 Responsive Excellence
+- Mobile-first design approach
+- Optimized touch targets for mobile devices
+- Adaptive layouts that work on all screen sizes
+- Progressive enhancement for larger screens
+
+### ⚡ Performance Optimized
+- Minimal dependencies for fast loading
+- Efficient CSS animations and transitions
+- Optimized images and assets
+- Clean code architecture for maintainability
+
+### ♿ Accessibility First
+- WCAG AA compliant contrast ratios
+- Keyboard navigation support
+- Screen reader compatible markup
+- Reduced motion preferences respected
 
 ## Installation and Setup
 
