@@ -41,7 +41,7 @@ const ThemeToggle = () => {
             )}
           </div>
         </div>
-        <span className="mode-label">{isDark ? 'Dark' : 'Light'}</span>
+        
       </div>
     </button>
   );
