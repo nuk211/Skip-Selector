@@ -1,8 +1,16 @@
 # Skip Selector - Modern React Application
 
-A professional, responsive, and themeable application for selecting skip sizes for waste management services. This project features a modern user interface with dark/light mode support, animated components, and a responsive design that works across all devices.
+A professional, responsive, and themeable application for selecting skip sizes for waste management services. This project was created as a React coding challenge to redesign the skip selection page from wewantwaste.co.uk with enhanced UI/UX, complete responsiveness, and modern React best practices.
 
 ![Skip Selector App](https://via.placeholder.com/800x400?text=Skip+Selector+Application)
+
+## Challenge Overview
+
+This project was developed as part of a front-end coding challenge with the following requirements:
+- Redesign the skip selection page from wewantwaste.co.uk to look completely different while maintaining functionality
+- Focus on clean, maintainable React code, responsiveness, and UI/UX improvements
+- Ensure proper display on both mobile and desktop browsers
+- Use live API data from wewantwaste.co.uk to populate skip options
 
 ## Features
 
@@ -66,3 +74,73 @@ Components are built with reusability and maintainability in mind:
 git clone https://github.com/yourusername/skip-selector-redesign.git
 cd skip-selector-redesign
 ```
+
+2. Install dependencies:
+```bash
+npm install
+```
+
+3. Start the development server:
+```bash
+npm start
+```
+
+4. Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+
+## Project Structure
+
+```
+skip-selector-redesign/
+├── public/
+│   ├── index.html
+│   └── favicon.ico
+├── src/
+│   ├── components/
+│   │   ├── SkipSelector.js
+│   │   ├── SkipCard.js
+│   │   ├── ProgressBar.js
+│   │   ├── ThemeToggle.js
+│   │   └── LoadingSpinner.js
+│   ├── hooks/
+│   │   └── useSkipData.js
+│   ├── context/
+│   │   └── ThemeContext.js
+│   ├── styles/
+│   │   └── styles.css
+│   ├── App.js
+│   └── index.js
+└── README.md
+```
+
+## Browser Support
+
+The application supports all modern browsers including:
+
+- Chrome (latest)
+- Firefox (latest)
+- Safari (latest)
+- Edge (latest)
+
+## Accessibility Considerations
+
+- **Keyboard Navigation** - All interactive elements are properly focused
+- **Screen Readers** - Semantic HTML with appropriate ARIA attributes
+- **Reduced Motion** - Respects user preference for reduced motion
+- **Color Contrast** - WCAG AA compliant contrast ratios
+- **Focus Indicators** - Clearly visible focus states for keyboard users
+
+## Future Improvements
+
+- Add end-to-end testing with Cypress
+- Implement more advanced animations with Framer Motion
+- Add multilingual support
+- Integrate with more payment providers
+- Add analytics tracking for user behavior
+
+## License
+
+MIT
+
+## Credits
+
+Designed and developed by nuk(yousif) for the wewantwaste.co.uk React coding challenge
