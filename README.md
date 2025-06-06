@@ -16,20 +16,6 @@ A professional, responsive, and themeable application for selecting skip sizes f
 
 *Optimized mobile interface with touch-friendly interactions*
 
-### Side-by-Side Comparison
-<div style="display: flex; justify-content: center; align-items: flex-start; gap: 20px; flex-wrap: wrap;">
-  <div style="text-align: center;">
-    <img src="./public/desktopScreen.png" alt="Desktop View" width="400" />
-    <br><em>Desktop Experience</em>
-  </div>
-  <div style="text-align: center;">
-    <img src="./public/phoneScreen.jpg" alt="Mobile View" width="200" />
-    <br><em>Mobile Experience</em>
-  </div>
-</div>
-
-</div>
-
 ## Challenge Overview
 
 This project was developed as part of a front-end coding challenge with the following requirements:
