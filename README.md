@@ -4,21 +4,31 @@ A professional, responsive, and themeable application for selecting skip sizes f
 
 ## Screenshots
 
+<div align="center">
+
 ### Desktop Experience
-![Skip Selector Desktop](./public/desktopScreen.png)
+<img src="./public/desktopScreen.png" alt="Skip Selector Desktop" width="600" />
+
 *Modern desktop interface with sticky progress bar and responsive card layout*
 
 ### Mobile Experience
-![Skip Selector Mobile](./public/phoneScreen.jpg)
+<img src="./public/phoneScreen.jpg" alt="Skip Selector Mobile" width="300" />
+
 *Optimized mobile interface with touch-friendly interactions*
 
-### Light & Dark Theme Support
-<div align="center">
-  <img src="./public/desktopScreen.png" width="45%" alt="Light Theme Desktop" />
-  <img src="./public/phoneScreen.jpg" width="45%" alt="Dark Theme Mobile" />
+### Side-by-Side Comparison
+<div style="display: flex; justify-content: center; align-items: flex-start; gap: 20px; flex-wrap: wrap;">
+  <div style="text-align: center;">
+    <img src="./public/desktopScreen.png" alt="Desktop View" width="400" />
+    <br><em>Desktop Experience</em>
+  </div>
+  <div style="text-align: center;">
+    <img src="./public/phoneScreen.jpg" alt="Mobile View" width="200" />
+    <br><em>Mobile Experience</em>
+  </div>
 </div>
 
-*Seamless theme switching with automatic system preference detection*
+</div>
 
 ## Challenge Overview
 
