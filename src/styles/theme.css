@@ -65,31 +65,31 @@
 body {
   background-color: var(--bg-primary);
   color: var(--text-primary);
+  overflow-x: hidden; /* Hide horizontal scrollbar */
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Hide all scrollbars */
+::-webkit-scrollbar {
+  display: none; /* Hide scrollbar for webkit browsers */
+}
+
+/* Hide scrollbar for Firefox */
+html {
+  scrollbar-width: none;
+}
+
+/* Hide scrollbar for IE and Edge */
+body {
+  -ms-overflow-style: none;
 }
 
 /* Selection color */
 ::selection {
   background-color: var(--primary-color);
   color: white;
-}
-
-/* Scrollbar theming - minimal styling */
-::-webkit-scrollbar {
-  width: 10px;
-}
-
-::-webkit-scrollbar-track {
-  background: var(--bg-secondary);
-}
-
-::-webkit-scrollbar-thumb {
-  background: var(--border-color);
-  border-radius: 4px;
-  border: 2px solid var(--bg-secondary);
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: var(--text-muted);
 }
 
 /* Accessibility improvements */

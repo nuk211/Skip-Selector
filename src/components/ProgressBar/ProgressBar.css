@@ -2,9 +2,12 @@
 .progress-container {
   background: var(--progress-bg);
   padding: 2rem 1rem;
-  position: sticky; /* Make it stick to the top */
-  top: 0; /* Stick to the very top */
-  z-index: 100; /* Ensure it stays above other content */
+  position: fixed; /* Fixed positioning */
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 100;
   overflow: hidden;
   box-shadow: 0 4px 16px var(--shadow-medium);
 }
@@ -185,7 +188,7 @@
 /* Tablet responsiveness */
 @media (max-width: 768px) {
   .progress-container {
-    padding: 1.25rem 0.5rem; /* Reduced padding for mobile */
+    padding: 1.25rem 0.5rem;
   }
   
   .progress-bar {
@@ -216,7 +219,7 @@
 /* Mobile responsiveness */
 @media (max-width: 580px) {
   .progress-container {
-    padding: 1rem 0.25rem; /* Even more reduced padding for small screens */
+    padding: 0.75rem 0.25rem;
   }
   
   .progress-bar {
@@ -268,10 +271,6 @@
 
 /* Extra small screens */
 @media (max-width: 400px) {
-  .progress-container {
-    padding: 0.75rem 0.125rem; /* Minimal padding for very small screens */
-  }
-  
   .progress-bar {
     gap: 0.25rem;
   }

@@ -4,14 +4,33 @@
   box-sizing: border-box;
 }
 
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+  position: relative;
+  /* Make sure body doesn't interfere with sticky */
+  transform: none !important;
+}
+
 .App {
   text-align: left;
+  width: 100%;
+  overflow-x: hidden;
+  position: relative;
+  /* Ensure App container doesn't break sticky */
+  transform: none !important;
 }
 
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  /* Critical: ensure body doesn't have transforms or filters that break sticky */
+  transform: none !important;
+  filter: none !important;
 }
 
 /* Global utilities */
@@ -25,4 +44,9 @@ body {
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
   border: 0;
+}
+
+/* Prevent horizontal scroll on all devices */
+* {
+  max-width: 100%;
 }

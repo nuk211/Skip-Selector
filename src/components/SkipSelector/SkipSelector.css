@@ -4,14 +4,20 @@
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   position: relative;
   transition: background 0.5s ease;
+  width: 100%;
+  overflow-x: hidden;
+  box-sizing: border-box;
+  /* Don't add any positioning that interferes with sticky children */
 }
 
 .main-content {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 40px 20px;
+  padding: 180px 20px 40px 20px; /* Add top padding to account for fixed progress bar */
   position: relative;
   z-index: 2;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .header-section {
@@ -23,7 +29,7 @@
   transition: all 0.5s ease-out;
   position: relative;
   padding: 20px 0;
-  overflow: visible; /* Ensure gradient overflow is visible */
+  overflow: visible; 
 }
 
 .header-section.animate-in {
@@ -327,25 +333,48 @@
   opacity: 0.5; /* Add overall opacity control */
 }
 
-/* Mobile Responsiveness */
+/* Mobile Responsiveness - UPDATED */
 @media (max-width: 768px) {
+  .skip-selector-app {
+    overflow-x: hidden; /* Ensure no horizontal scroll */
+  }
+  
+  .main-content {
+    padding: 130px 15px 20px 15px; /* Adjusted top padding for tablet */
+    width: 100%;
+    max-width: 100%;
+  }
+  
+  .header-section {
+    padding: 15px 0;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
   .header-section h1 {
     font-size: 2.2rem;
+    word-break: break-word; /* Prevent text overflow */
   }
   
   .subtitle {
     font-size: 1.1rem;
+    word-break: break-word;
   }
   
   .skips-grid {
     grid-template-columns: 1fr;
     gap: 25px;
+    width: 100%;
+    padding: 0;
+    margin: 0 0 50px 0;
   }
   
   .continue-content {
     flex-direction: column;
     gap: 15px;
     text-align: center;
+    width: 100%;
+    box-sizing: border-box;
   }
   
   .selected-info {
@@ -356,6 +385,7 @@
     width: 100%;
     padding: 15px;
     justify-content: center;
+    box-sizing: border-box;
   }
   
   .theme-toggle-wrapper {
@@ -365,6 +395,9 @@
   
   .location-info {
     padding: 10px 20px;
+    max-width: 90%;
+    box-sizing: border-box;
+    word-break: break-word;
   }
   
   .header-section::after {
@@ -377,5 +410,45 @@
     left: -15px;
     right: -15px;
     bottom: -10px;
+  }
+}
+
+/* Mobile responsiveness */
+@media (max-width: 580px) {
+  .main-content {
+    padding: 130px 10px 15px 10px; /* Reduced top padding for mobile */
+  }
+  
+  .header-section h1 {
+    font-size: 1.8rem;
+  }
+  
+  .subtitle {
+    font-size: 1rem;
+  }
+  
+  .location-info {
+    padding: 8px 15px;
+    font-size: 14px;
+  }
+}
+
+/* Extra small screens */
+@media (max-width: 400px) {
+  .main-content {
+    padding: 120px 10px 15px 10px; /* Even less top padding for very small screens */
+  }
+  
+  .header-section h1 {
+    font-size: 1.6rem;
+  }
+  
+  .subtitle {
+    font-size: 0.9rem;
+  }
+  
+  .location-info {
+    padding: 6px 12px;
+    font-size: 12px;
   }
 }
