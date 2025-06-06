@@ -1,0 +1,101 @@
+/* Global theme variables and styles */
+:root {
+  /* Light theme colors - enhanced for visual appeal */
+  --bg-primary: #ffffff;
+  --bg-secondary: #f8f9fa;
+  --bg-tertiary: #eef2f7;
+  --text-primary: #1a2a3a;
+  --text-secondary: #495867;
+  --text-muted: #768696;
+  --border-color: #d1dbe8;
+  --shadow-light: rgba(61, 90, 128, 0.08);
+  --shadow-medium: rgba(61, 90, 128, 0.12);
+  --shadow-dark: rgba(61, 90, 128, 0.18);
+  
+  /* Brand colors - more vibrant */
+  --primary-color: #3182F6;
+  --primary-hover: #1867d0;
+  --success-color: #34c759;
+  --success-hover: #28a745;
+  --warning-color: #ff9500;
+  --warning-hover: #e67800;
+  --error-color: #ff3b30;
+  --error-hover: #d63026;
+  
+  /* Progress bar specific - more vibrant gradient */
+  --progress-bg: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #d946ef 100%);
+  --progress-text: #ffffff;
+  --progress-overlay: rgba(255, 255, 255, 0.15);
+}
+
+[data-theme="dark"] {
+  /* Dark theme colors - rich dark mode with better contrast */
+  --bg-primary: #111827;
+  --bg-secondary: #1f2937;
+  --bg-tertiary: #2c3a47;
+  --text-primary: #f3f4f6;
+  --text-secondary: #d1d5db;
+  --text-muted: #9ca3af;
+  --border-color: #374151;
+  --shadow-light: rgba(0, 0, 0, 0.3);
+  --shadow-medium: rgba(0, 0, 0, 0.4);
+  --shadow-dark: rgba(0, 0, 0, 0.5);
+  
+  /* Brand colors - adjusted for dark mode with better visibility */
+  --primary-color: #60a5fa;
+  --primary-hover: #3b82f6;
+  --success-color: #4ade80;
+  --success-hover: #22c55e;
+  --warning-color: #fbbf24;
+  --warning-hover: #d97706;
+  --error-color: #f87171;
+  --error-hover: #ef4444;
+  
+  /* Progress bar specific - darker elegant gradient */
+  --progress-bg: linear-gradient(135deg, #312e81 0%, #4c1d95 50%, #701a75 100%);
+  --progress-text: #ffffff;
+  --progress-overlay: rgba(255, 255, 255, 0.07);
+}
+
+/* Essential base styles for theme transition */
+* {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+/* Selection color */
+::selection {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+/* Scrollbar theming - minimal styling */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+  border-radius: 4px;
+  border: 2px solid var(--bg-secondary);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-muted);
+}
+
+/* Accessibility improvements */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+    animation: none !important;
+  }
+}

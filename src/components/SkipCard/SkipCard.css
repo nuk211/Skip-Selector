@@ -1,0 +1,172 @@
+.skip-card {
+  background: var(--bg-secondary);
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0 8px 25px var(--shadow-medium);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  position: relative;
+  border: 3px solid transparent;
+}
+
+.skip-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px var(--shadow-dark);
+  background: var(--bg-tertiary);
+}
+
+.skip-card.selected {
+  border-color: var(--success-color);
+  box-shadow: 0 15px 35px rgba(var(--success-color), 0.3);
+}
+
+.skip-card.road-restricted {
+  border-left: 4px solid var(--warning-color);
+}
+
+.restriction-badge {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background: var(--warning-color);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 15px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.skip-visual {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.skip-icon {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  color: var(--primary-color);
+}
+
+.skip-size {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+.skip-details h3 {
+  font-size: 1.3rem;
+  margin-bottom: 8px;
+  color: var(--text-primary);
+}
+
+.skip-description {
+  color: var(--text-secondary);
+  margin-bottom: 15px;
+  font-style: italic;
+}
+
+.skip-features {
+  margin-bottom: 20px;
+}
+
+.feature {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+
+.feature-icon {
+  margin-right: 8px;
+  width: 20px;
+  color: var(--primary-color);
+}
+
+.pricing {
+  border-top: 1px solid var(--border-color);
+  padding-top: 15px;
+  margin-bottom: 20px;
+}
+
+.price-breakdown {
+  font-size: 14px;
+  color: var(--text-secondary);
+  margin-bottom: 5px;
+}
+
+.total-price {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--success-color);
+}
+
+.select-button {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  border-radius: 8px;
+  background: var(--primary-color);
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.select-button:hover {
+  background: var(--primary-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px var(--shadow-medium);
+}
+
+.select-button.selected {
+  background: var(--success-color);
+}
+
+.select-button:disabled {
+  background: var(--text-muted);
+  cursor: not-allowed;
+}
+
+/* Additional theme-specific adjustments */
+[data-theme="dark"] .skip-card {
+  border-color: rgba(255, 255, 255, 0.05);
+}
+
+[data-theme="dark"] .skip-card.selected {
+  box-shadow: 0 15px 35px rgba(74, 222, 128, 0.2);
+}
+
+[data-theme="dark"] .skip-card.road-restricted {
+  border-left: 4px solid var(--warning-color);
+}
+
+/* Visual enhancements for dark mode */
+[data-theme="dark"] .skip-card:hover {
+  background: var(--bg-tertiary);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+[data-theme="dark"] .total-price {
+  text-shadow: 0 0 10px rgba(74, 222, 128, 0.3);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .skip-card {
+    padding: 20px;
+  }
+  
+  .skip-icon {
+    font-size: 2.5rem;
+  }
+  
+  .skip-size {
+    font-size: 1.3rem;
+  }
+  
+  .total-price {
+    font-size: 1.8rem;
+  }
+}

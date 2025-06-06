@@ -1,0 +1,303 @@
+.theme-toggle {
+  position: relative;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 50px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  outline: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transform-origin: center;
+}
+
+.theme-toggle:hover {
+  background: rgba(0, 0, 0, 0.05);
+  transform: scale(1.05);
+}
+
+.theme-toggle:focus-visible {
+  outline: 2px solid var(--primary-color, #2196F3);
+  outline-offset: 2px;
+}
+
+.theme-toggle.animating {
+  animation: bounce 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@keyframes bounce {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.15); }
+}
+
+.toggle-track {
+  width: 62px;
+  height: 32px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 50px;
+  position: relative;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 
+    inset 0 2px 4px rgba(0, 0, 0, 0.2),
+    0 2px 8px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+}
+
+/* Create stars in dark mode */
+.toggle-track-stars {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+}
+
+.toggle-track-stars::before,
+.toggle-track-stars::after {
+  content: "";
+  position: absolute;
+  background-color: white;
+  border-radius: 50%;
+  opacity: 0.6;
+  transition: all 0.3s ease;
+}
+
+.toggle-track-stars::before {
+  width: 2px;
+  height: 2px;
+  top: 8px;
+  left: 35px;
+  box-shadow: 
+    5px -5px 0 1px rgba(255, 255, 255, 0.7),
+    10px 8px 0 0px rgba(255, 255, 255, 0.5),
+    15px 3px 0 0px rgba(255, 255, 255, 0.6),
+    20px -3px 0 1px rgba(255, 255, 255, 0.4),
+    25px 5px 0 0px rgba(255, 255, 255, 0.5);
+}
+
+.toggle-track-stars::after {
+  width: 1px;
+  height: 1px;
+  top: 18px;
+  left: 45px;
+  box-shadow: 
+    -20px -6px 0 0px rgba(255, 255, 255, 0.7),
+    -15px 2px 0 1px rgba(255, 255, 255, 0.5),
+    -8px -4px 0 0px rgba(255, 255, 255, 0.6),
+    5px 6px 0 1px rgba(255, 255, 255, 0.4);
+}
+
+/* Create clouds in light mode */
+.toggle-track-clouds {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+}
+
+.toggle-track-clouds::before,
+.toggle-track-clouds::after {
+  content: "";
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.toggle-track-clouds::before {
+  width: 12px;
+  height: 6px;
+  top: 16px;
+  left: 32px;
+  border-radius: 6px;
+}
+
+.toggle-track-clouds::after {
+  width: 18px;
+  height: 8px;
+  top: 8px;
+  left: 14px;
+  border-radius: 8px;
+}
+
+.toggle-thumb {
+  width: 26px;
+  height: 26px;
+  background: white;
+  border-radius: 50%;
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 
+    0 3px 10px rgba(0, 0, 0, 0.2),
+    0 2px 3px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+  transition: 
+    transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275), 
+    background-color 0.5s ease,
+    box-shadow 0.5s ease;
+}
+
+.toggle-icon {
+  color: #666;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  opacity: 0.9;
+}
+
+.mode-label {
+  position: absolute;
+  font-size: 10px;
+  font-weight: bold;
+  color: rgba(255, 255, 255, 0.7);
+  bottom: 5px;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  transform: translateY(5px);
+  transition: all 0.3s ease;
+}
+
+/* Dark mode styles */
+[data-theme="dark"] .toggle-track {
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+}
+
+[data-theme="dark"] .toggle-thumb {
+  transform: translateX(30px);
+  background: #13111C;
+  box-shadow: 
+    0 3px 10px rgba(0, 0, 0, 0.4),
+    0 2px 3px rgba(0, 0, 0, 0.3),
+    inset 0 0 3px rgba(255, 255, 255, 0.1);
+}
+
+[data-theme="dark"] .toggle-icon {
+  color: #ffd700;
+}
+
+[data-theme="dark"] .toggle-track-stars {
+  opacity: 1;
+}
+
+[data-theme="light"] .toggle-icon {
+  color: #ff6b35;
+}
+
+[data-theme="light"] .toggle-track-clouds {
+  opacity: 1;
+}
+
+/* Hover effects */
+.theme-toggle:hover .toggle-thumb {
+  box-shadow: 
+    0 5px 15px rgba(0, 0, 0, 0.25),
+    0 3px 8px rgba(0, 0, 0, 0.15);
+}
+
+.theme-toggle:hover .toggle-icon {
+  opacity: 1;
+}
+
+.theme-toggle:hover .mode-label {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+[data-theme="dark"] .theme-toggle:hover .toggle-thumb {
+  transform: translateX(30px) scale(1.05);
+  box-shadow: 
+    0 5px 15px rgba(0, 0, 0, 0.4),
+    0 3px 8px rgba(0, 0, 0, 0.3),
+    inset 0 0 3px rgba(255, 255, 255, 0.2);
+}
+
+/* Animation for icon rotation */
+.toggle-icon svg {
+  transition: transform 0.3s ease;
+}
+
+.theme-toggle:hover .toggle-icon svg {
+  transform: rotate(15deg);
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1) rotate(0deg); }
+  50% { transform: scale(1.1) rotate(15deg); }
+  100% { transform: scale(1) rotate(0deg); }
+}
+
+[data-theme="dark"] .theme-toggle:hover .toggle-icon svg {
+  animation: darkPulse 1.5s infinite;
+}
+
+@keyframes darkPulse {
+  0% { transform: scale(1) rotate(0deg); }
+  50% { transform: scale(1.1) rotate(-15deg); }
+  100% { transform: scale(1) rotate(0deg); }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .theme-toggle {
+    padding: 6px;
+  }
+  
+  .toggle-track {
+    width: 52px;
+    height: 26px;
+  }
+  
+  .toggle-thumb {
+    width: 22px;
+    height: 22px;
+    top: 2px;
+    left: 2px;
+  }
+  
+  .toggle-icon svg {
+    width: 14px;
+    height: 14px;
+  }
+  
+  [data-theme="dark"] .toggle-thumb {
+    transform: translateX(26px);
+  }
+  
+  [data-theme="dark"] .theme-toggle:hover .toggle-thumb {
+    transform: translateX(26px) scale(1.05);
+  }
+
+  .mode-label {
+    font-size: 8px;
+  }
+}
+
+/* Accessibility improvements */
+@media (prefers-reduced-motion: reduce) {
+  .theme-toggle,
+  .toggle-track,
+  .toggle-thumb,
+  .toggle-icon,
+  .toggle-icon svg,
+  .theme-toggle.animating,
+  .toggle-track-stars,
+  .toggle-track-clouds {
+    transition: none;
+    animation: none;
+  }
+}
