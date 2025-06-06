@@ -16,6 +16,9 @@ A professional, responsive, and themeable application for selecting skip sizes f
 
 *Optimized mobile interface with touch-friendly interactions*
 
+
+</div>
+
 ## Challenge Overview
 
 This project was developed as part of a front-end coding challenge with the following requirements:
